@@ -21,6 +21,7 @@ namespace_imports = [
     'device/oneplus/sm8850-common',
     'hardware/oplus',
     'hardware/qcom-caf/sm8850',
+    'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/commonsys/display',
     'vendor/qcom/opensource/commonsys-intf/display',
