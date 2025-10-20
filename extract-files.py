@@ -96,7 +96,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/media_codecs_canoe_v2.xml',
     ): blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video).*\n', '')
-        .regex_replace('media_codecs_vendor_audio', 'media_codecs_dolby_vision'),
+        .regex_replace('media_codecs_vendor_audio', 'media_codecs_dolby_vision')
+        .regex_replace('</MediaCodecs>','    <Include href="media_codecs_dolby_audio.xml" />')
+        .add_line_if_missing('</MediaCodecs>'),
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace(r'(\s*)(<name>android.hardware.media.c2</name>)(?:\s*<version>\d+</version>)?', r'\1\2\1<version>2</version>'),
     'vendor/etc/vintf/manifest/qms-saidl.xml': blob_fixup()

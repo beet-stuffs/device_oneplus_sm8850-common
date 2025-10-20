@@ -196,6 +196,9 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set_bool,qtidisplay,wcg_vendor_render_intents,true)
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
