@@ -4,6 +4,10 @@
     "version": "6.12"
   },
   {
+    "repository": "inferno0230/hardware_dolby",
+    "target_path": "hardware/dolby"
+  },
+  {
     "repository": "android_hardware_oplus",
     "target_path": "hardware/oplus"
   },
