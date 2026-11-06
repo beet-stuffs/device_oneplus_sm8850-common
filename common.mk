@@ -392,6 +392,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_PVMFW_IMAGE := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Parts
+$(call inherit-product, packages/apps/OplusParts/oplusparts.mk)
+
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
