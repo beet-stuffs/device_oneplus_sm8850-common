@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Key handlers run by PartsKeyHandler, in order: pocket mode first, then the Plus key. -->
+    <string-array name="config_partsKeyHandlers" translatable="false">
+        <item>org.lineageos.settings.pocket.PocketKeyHandler</item>
+        <item>org.lineageos.settings.pluskey.KeyHandler</item>
+    </string-array>
+</resources>
