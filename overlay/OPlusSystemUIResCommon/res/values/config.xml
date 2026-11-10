@@ -10,4 +10,11 @@
 
     <!-- Preferred max refresh rate at keyguard, if supported by the display. -->
     <integer name="config_keyguardMaxRefreshRate">60</integer>
+
+    <!-- Doze: AOD brightness from qti.sensor.lux_aod, which reports 0 (dark) or 1 (bright).
+         Integer scale [1, 255]; 35 is the default doze brightness (~0.134). -->
+    <integer-array name="config_doze_brightness_sensor_to_brightness">
+        <item>12</item> <!-- 0: dark (~0.043) -->
+        <item>35</item> <!-- 1: bright -->
+    </integer-array>
 </resources>
