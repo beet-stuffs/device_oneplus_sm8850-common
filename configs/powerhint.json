@@ -15,7 +15,6 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
       "Values": [
         "2227200",
-        "1228800",
         "787200"
       ],
       "ResetOnInit": true
@@ -35,6 +34,119 @@
       "Values": [
         "2112000",
         "883200"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUGoldAdaptiveLowFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq",
+      "Values": [
+        "748800",
+        "600000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUGoldAdaptiveHighFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq",
+      "Values": [
+        "2227200",
+        "1228800",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUPrimeAdaptiveLowFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy6/walt/adaptive_low_freq",
+      "Values": [
+        "1017600",
+        "800000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUPrimeAdaptiveHighFreq",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy6/walt/adaptive_high_freq",
+      "Values": [
+        "2112000",
+        "1000000",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUTouchWake",
+      "Path": "/sys/class/kgsl/kgsl-3d0/touch_wake",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedUpDownMigrateBackground",
+      "Path": "/proc/sys/walt/cluster0/sched_background_updownmigrate",
+      "Values": [
+        "60 40",
+        "95 85"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedUpDownMigrateForeground",
+      "Path": "/proc/sys/walt/cluster0/sched_foreground_updownmigrate",
+      "Values": [
+        "60 40",
+        "95 85"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedUpDownMigrateOtherCgroup",
+      "Path": "/proc/sys/walt/cluster0/sched_other_cgroup_updownmigrate",
+      "Values": [
+        "60 40",
+        "95 85"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedUpDownMigrateTopapp",
+      "Path": "/proc/sys/walt/cluster0/sched_topapp_updownmigrate",
+      "Values": [
+        "60 40",
+        "95 85"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DDRMemlatGoldMinFreq",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq",
+      "Values": [
+        "1353000",
+        "547000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "SchedBoost",
+      "Path": "/proc/sys/walt/sched_boost",
+      "Values": [
+        "1",
+        "2",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUGoldMinCores",
+      "Path": "/sys/devices/system/cpu/cpu0/core_ctl/min_cpus",
+      "Values": [
+        "6",
+        "4"
       ],
       "ResetOnInit": true
     },
@@ -395,9 +507,45 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUGoldClusterMinFreq",
+      "Node": "CPUGoldAdaptiveLowFreq",
+      "Duration": 0,
+      "Value": "600000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUGoldAdaptiveHighFreq",
       "Duration": 0,
       "Value": "1228800"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUPrimeAdaptiveLowFreq",
+      "Duration": 0,
+      "Value": "800000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUPrimeAdaptiveHighFreq",
+      "Duration": 0,
+      "Value": "1000000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUTouchWake",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "SchedBoost",
+      "Duration": 0,
+      "Value": "2"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUGoldMinCores",
+      "Duration": 0,
+      "Value": "6"
     },
     {
       "PowerHint": "INTERACTIVE",
@@ -410,18 +558,6 @@
       "Node": "SchedBusyHystEnableCPUs",
       "Duration": 0,
       "Value": "15"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUPrimeClusterMinFreq",
-      "Duration": 1500,
-      "Value": "2112000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUGoldClusterMinFreq",
-      "Duration": 1500,
-      "Value": "2227200"
     },
     {
       "PowerHint": "LAUNCH",
@@ -506,6 +642,72 @@
       "Node": "GPUIdleTimer",
       "Duration": 1500,
       "Value": "10000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUTouchWake",
+      "Duration": 1500,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUGoldAdaptiveLowFreq",
+      "Duration": 1500,
+      "Value": "748800"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUGoldAdaptiveHighFreq",
+      "Duration": 1500,
+      "Value": "2227200"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUPrimeAdaptiveLowFreq",
+      "Duration": 1500,
+      "Value": "1017600"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUPrimeAdaptiveHighFreq",
+      "Duration": 1500,
+      "Value": "2112000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedBoost",
+      "Duration": 1500,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "DDRMemlatGoldMinFreq",
+      "Duration": 1500,
+      "Value": "1353000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedUpDownMigrateBackground",
+      "Duration": 1500,
+      "Value": "60 40"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedUpDownMigrateForeground",
+      "Duration": 1500,
+      "Value": "60 40"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedUpDownMigrateOtherCgroup",
+      "Duration": 1500,
+      "Value": "60 40"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "SchedUpDownMigrateTopapp",
+      "Duration": 1500,
+      "Value": "60 40"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
