@@ -163,11 +163,9 @@ fi
 if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
 	echo 556000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 	echo 806400 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-	echo "0:556000 6:806400" > /data/vendor/perfd/default_scaling_min_freq
 else
 	echo 556000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 	echo 806400 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-	echo "0:556000 6:806400" > /data/vendor/perfd/default_scaling_min_freq
 fi
 
 # Reset the RT boost, which is 1024 (max) by default.

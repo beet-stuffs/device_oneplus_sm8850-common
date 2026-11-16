@@ -187,16 +187,13 @@ fi
 if [ $platformid == "722" ] || [ $platformid == "723" ]; then # Alana settings
 		echo 720000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 		echo 864000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-		echo "0:720000 6:864000" > /data/vendor/perfd/default_scaling_min_freq
 else
 	if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
 		echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 		echo 864000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-		echo "0:614400 6:864000" > /data/vendor/perfd/default_scaling_min_freq
 	else
 		echo 787200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 		echo 864000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-		echo "0:787200 6:864000" > /data/vendor/perfd/default_scaling_min_freq
 	fi
 fi
 

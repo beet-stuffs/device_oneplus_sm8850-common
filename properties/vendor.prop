@@ -240,6 +240,12 @@ ro.vendor.qspm.enable=true
 vendor.perf.framepacing.enable=1
 vendor.perf.qfps.enable=1
 
+# Power HAL
+vendor.powerhal.disp.idle_support=false
+vendor.powerhal.interaction.max=3000
+vendor.powerhal.interaction.min=1000
+vendor.powerhal.interaction.offset=650
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.radio.apm_sim_not_pwdn=1
