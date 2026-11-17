@@ -15,6 +15,7 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
       "Values": [
         "2227200",
+        "1228800",
         "787200"
       ],
       "ResetOnInit": true
@@ -34,46 +35,6 @@
       "Values": [
         "2112000",
         "883200"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUGoldAdaptiveLowFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq",
-      "Values": [
-        "748800",
-        "600000",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUGoldAdaptiveHighFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq",
-      "Values": [
-        "2227200",
-        "1228800",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUPrimeAdaptiveLowFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/walt/adaptive_low_freq",
-      "Values": [
-        "1017600",
-        "800000",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUPrimeAdaptiveHighFreq",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/walt/adaptive_high_freq",
-      "Values": [
-        "2112000",
-        "1000000",
-        "0"
       ],
       "ResetOnInit": true
     },
@@ -507,27 +468,9 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPUGoldAdaptiveLowFreq",
-      "Duration": 0,
-      "Value": "600000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUGoldAdaptiveHighFreq",
+      "Node": "CPUGoldClusterMinFreq",
       "Duration": 0,
       "Value": "1228800"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUPrimeAdaptiveLowFreq",
-      "Duration": 0,
-      "Value": "800000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUPrimeAdaptiveHighFreq",
-      "Duration": 0,
-      "Value": "1000000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -651,25 +594,13 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "CPUGoldAdaptiveLowFreq",
-      "Duration": 1500,
-      "Value": "748800"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUGoldAdaptiveHighFreq",
+      "Node": "CPUGoldClusterMinFreq",
       "Duration": 1500,
       "Value": "2227200"
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "CPUPrimeAdaptiveLowFreq",
-      "Duration": 1500,
-      "Value": "1017600"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUPrimeAdaptiveHighFreq",
+      "Node": "CPUPrimeClusterMinFreq",
       "Duration": 1500,
       "Value": "2112000"
     },
