@@ -270,3 +270,7 @@ wifi.aware.interface=wifi-aware0
 
 # Zygote
 zygote.critical_window.minute=10
+
+# ADPF (Pixel-style AdpfConfig in powerhint.json; needs the hal_power_default setsched sepolicy)
+debug.hwui.use_hint_manager=true
+debug.sf.enable_adpf_cpu_hint=true
