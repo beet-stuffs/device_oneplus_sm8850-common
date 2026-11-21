@@ -330,7 +330,6 @@ rpmh-regulator.ko
 rproc_qcom_common.ko
 rtc-pm8xxx.ko
 saupwk.ko
-sched-walt.ko
 sdhci-msm.ko
 secure_buffer.ko
 sg.ko

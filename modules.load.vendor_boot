@@ -105,7 +105,6 @@ qseecom_proxy.ko
 qti-regmap-debugfs.ko
 rpmh-regulator.ko
 rtc-pm8xxx.ko
-sched-walt.ko
 sdhci-msm.ko
 secure_buffer.ko
 sg.ko
