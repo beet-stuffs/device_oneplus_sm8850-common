@@ -1,0 +1,11 @@
+--- a/apktool.yml
++++ b/apktool.yml
+@@ -4,7 +4,7 @@ usesFramework:
+   ids:
+   - 1
+ sdkInfo:
+-  minSdkVersion: CinnamonBun
++  minSdkVersion: 37
+   targetSdkVersion: 37
+ versionInfo:
+   versionCode: 36

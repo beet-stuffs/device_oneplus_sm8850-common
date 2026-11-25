@@ -74,6 +74,11 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(PROCESS_NAME=xtra-daemon\nPROCESS_ARGUMENT=\nPROCESS_STATE=)ENABLED', r'\1DISABLED'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
+    (
+        'product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk',
+        'product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk',
+    ): blob_fixup()
+        .apktool_patch('blob-patches/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.patch'),
     'vendor/etc/seccomp_policy/syshealthmon.policy': blob_fixup()
         .add_line_if_missing('clock_gettime: 1'),
     'system_ext/lib64/libwfdavenhancements.so': blob_fixup()
